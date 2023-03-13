@@ -8,6 +8,9 @@ contract BootcampContract {
     address public owner;
     uint256 number;
 
+    constructor(){
+        owner=msg.sender;
+    }
 
     function store(uint256 num) public {
         number = num;
