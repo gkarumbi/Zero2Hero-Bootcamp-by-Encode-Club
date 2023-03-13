@@ -20,4 +20,14 @@ contract BootcampContract {
     function retrieve() public view returns (uint256){
         return number;
     }
+
+    function returnAddress() external view returns(address){
+
+        if (msg.sender == owner) {
+            return address(0x000000000000000000000000000000000000dEaD);
+            
+        } else {
+            return msg.sender;
+        }
+    }
 }
